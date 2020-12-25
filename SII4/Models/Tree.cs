@@ -168,6 +168,7 @@ namespace SII4.Models
             if (node == null) node = Root;
             if (node.Child == null || !node.Child.Any())
             {
+                node.Distance = 0.0;
                 (nodes ?? throw new ArgumentNullException(nameof(nodes))).Add(node);
             }
             else
